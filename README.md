@@ -1,5 +1,15 @@
 # ZMK Firmware: Personal fork
 
+##  Build instructions
+
+```console
+cd app
+west build -d build/left -b nice_nano -p -- -DSHIELD=corne_left
+west build -d build/right -b nice_nano -p -- -DSHIELD=corne_right
+cp build/left/zephyr/zmk.uf2 /media/mike/NICENANO/.
+cp build/right/zephyr/zmk.uf2 /media/mike/NICENANO/.
+```
+
 This is my personal ZMK fork containing various experimental features used in
 my [zmk-config](https://github.com/urob/zmk-config/). It is regularly rebased
 onto the latest upstream.
