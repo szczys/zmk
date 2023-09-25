@@ -1,5 +1,15 @@
 # Zephyr™ Mechanical Keyboard (ZMK) Firmware
 
+##  Build instructions
+
+```console
+cd app
+west build -d build/left -b nice_nano -p -- -DSHIELD=corne_left
+west build -d build/right -b nice_nano -p -- -DSHIELD=corne_right
+cp build/left/zephyr/zmk.uf2 /media/mike/NICENANO/.
+cp build/right/zephyr/zmk.uf2 /media/mike/NICENANO/.
+```
+
 [![Discord](https://img.shields.io/discord/719497620560543766)](https://zmk.dev/community/discord/invite)
 [![Build](https://github.com/zmkfirmware/zmk/workflows/Build/badge.svg)](https://github.com/zmkfirmware/zmk/actions)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
