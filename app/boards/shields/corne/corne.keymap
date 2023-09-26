@@ -81,6 +81,8 @@
 &kp LSHFT     &kp Z  &kp X  &kp C      &kp V              &kp B        &kp N            &kp M      &kp COMMA        &kp DOT  &kp FSLH  &mo 3
                             &kp LCTRL  &mt LGUI KP_ENTER  &lt 1 TAB    &lt 2 BACKSPACE  &kp SPACE  &kp RIGHT_SHIFT
             >;
+
+            label = "Base";
         };
 
         lower_layer {
@@ -96,6 +98,8 @@
 &trans  &trans           &trans        &kp TILDE     &kp GRAVE     &kp LC(SPACE)    &trans        &td_br_open    &td_br_close  &kp COLON             &kp SEMICOLON          &trans
                                        &kp LGUI      &trans        &kp SPACE        &kp F12       &trans         &kp COLON
             >;
+
+            label = "Lower";
         };
 
         raise_layer {
@@ -111,6 +115,8 @@
 &trans  &kp LESS_THAN  &kp GREATER_THAN  &kp LC(LS(C))  &kp LC(LS(V))  &kp SEMICOLON    &kp K_PLAY_PAUSE  &trans    &trans    &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &trans
                                          &kp ESCAPE     &trans         &trans           &kp RET           &trans    &kp RALT
             >;
+
+            label = "Raise";
         };
 
         function_layer {
@@ -126,6 +132,8 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans             &trans  &trans    &trans  &trans   &trans
                                         &kp LGUI      &trans        &kp SPACE       &kp RET            &trans  &kp RALT
             >;
+
+            label = "Function";
         };
     };
 };
