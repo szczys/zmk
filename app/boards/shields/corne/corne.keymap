@@ -63,6 +63,11 @@
             bindings = <&kp PRINTSCREEN>;
             key-positions = <25 10>;
         };
+
+        toggle_num_escalt {
+            bindings = <&tog 4>;
+            key-positions = <0 12>;
+        };
     };
 
     keymap {
@@ -77,7 +82,7 @@
 
             bindings = <
 &kp ESCAPE    &kp Q  &kp W  &kp E      &kp R              &kp T        &kp Y            &kp U      &kp I            &kp O    &kp P     &kp DELETE
-&kp LEFT_ALT  &kp A  &kp S  &kp D      &kp F              &kp G        &kp H            &kp J      &kp K            &kp L    &kp SEMI  &kp SQT
+&kp LEFT_ALT  &kp A  &kp S  &kp D      &lt 4 F            &kp G        &kp H            &kp J      &kp K            &kp L    &kp SEMI  &kp SQT
 &kp LSHFT     &kp Z  &kp X  &kp C      &kp V              &kp B        &kp N            &kp M      &kp COMMA        &kp DOT  &kp FSLH  &mo 3
                             &sk LCTRL  &mt LGUI KP_ENTER  &lt 1 TAB    &lt 2 BACKSPACE  &kp SPACE  &kp RIGHT_SHIFT
             >;
@@ -134,6 +139,17 @@
             >;
 
             label = "Function";
+        };
+
+        numpad_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp PLUS   &kp N7  &kp N8  &kp N9  &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp MINUS  &kp N4  &kp N5  &kp N6  &kp KP_ENTER  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp PERIOD    &trans
+                        &trans  &trans  &trans    &trans     &trans  &kp N0
+            >;
+
+            label = "Numpad";
         };
     };
 };
