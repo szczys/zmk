@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+$SCRIPT_DIR/../.venv/bin/west build -d $SCRIPT_DIR/build/left -b nice_nano -p -- -DSHIELD=corne_left
+$SCRIPT_DIR/../.venv/bin/west build -d $SCRIPT_DIR/build/right -b nice_nano -p -- -DSHIELD=corne_right
