@@ -1,5 +1,13 @@
 #include <dt-bindings/led/led.h>
 
+/ {
+    leds {
+        oled_pwr: oled_pwr {
+            gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;
+        };
+    };
+};
+
 &pinctrl {
     spi3_default: spi3_default {
         group1 {
@@ -32,7 +40,7 @@
         spi-max-frequency = <4000000>;
 
         /* WS2812 */
-        chain-length = <10>; /* arbitrary; change at will */
+        chain-length = <27>; /* arbitrary; change at will */
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
 
