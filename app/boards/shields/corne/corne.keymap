@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
@@ -104,7 +105,7 @@
             bindings = <
 &kp ESCAPE    &kp Q  &kp W  &kp E      &kp R              &kp T        &kp Y            &kp U      &kp I            &kp O    &kp P     &kp DELETE
 &kp LEFT_ALT  &kp A  &kp S  &lt 5 D    &lt 4 F            &kp G        &kp H            &kp J      &kp K            &kp L    &kp SEMI  &kp SQT
-&kp LSHFT     &kp Z  &kp X  &kp C      &kp V              &kp B        &kp N            &kp M      &kp COMMA        &kp DOT  &kp FSLH  &mo 3
+&kp LSHFT     &kp Z  &kp X  &kp C      &kp V              &kp B        &kp N            &lt 6 M    &kp COMMA        &kp DOT  &kp FSLH  &mo 3
                             &sk LCTRL  &mt LGUI KP_ENTER  &lt 1 TAB    &lt 2 BACKSPACE  &kp SPACE  &kp RIGHT_SHIFT
             >;
 
@@ -186,10 +187,10 @@
 
         mouse_layer {
             bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                     &none  &none  &none    &none  &none  &none
+&none  &none  &mwh SCROLL_UP  &mmv MOVE_UP    &mwh SCROLL_DOWN  &none        &none  &none  &none  &none  &none  &none
+&none  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &none        &none  &none  &none  &none  &none  &none
+&none  &none  &none           &none           &none             &none        &none  &none  &none  &none  &none  &none
+                              &mkp RCLK       &mkp MCLK         &mkp LCLK    &none  &none  &none
             >;
 
             label = "Mouse";
