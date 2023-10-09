@@ -16,10 +16,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_BR_OPEN";
             #binding-cells = <0>;
-            bindings =
-                <&kp LEFT_BRACKET>,
-                <&kp LEFT_BRACE>,
-                <&kp LESS_THAN>;
+            bindings = <&kp LEFT_BRACKET>, <&kp LEFT_BRACE>, <&kp LESS_THAN>;
         };
         td_br_close: td_br_close {
             compatible = "zmk,behavior-tap-dance";
@@ -154,10 +151,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6             &kp F7  &kp F8    &kp F9  &kp F10  &trans
-&bt BT_CLR  &kp F11       &kp F12       &trans        &trans        &trans          &ext_power EP_TOG  &trans  &trans    &trans  &trans   &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans             &trans  &trans    &trans  &trans   &trans
-                                        &trans        &trans        &kp SPACE       &kp RET            &trans  &kp RALT
+&bt BT_CLR  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6             &kp F7  &kp F8    &kp F9  &kp F10  &trans
+&trans      &kp F11       &kp F12       &trans        &trans        &trans          &ext_power EP_TOG  &trans  &trans    &trans  &trans   &trans
+&trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans             &trans  &trans    &trans  &trans   &trans
+                                        &trans        &trans        &trans          &trans             &trans  &kp RALT
             >;
 
             label = "Function";
