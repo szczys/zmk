@@ -72,6 +72,18 @@ layer_lower = (
     kp("F12", 785, 414, 30, rotate=-57), kp(None, 864, 410, 40, rotate=18), kp(":", 954, 384, 44)
     )
 
+layer_raise = (
+    kp(None, 86, 199, 26), kp("del", 152, 200, 23), kp(None, 224, 167, 44), kp("-", 294, 159, 44), kp("+", 360, 167, 44), kp("PgUp", 423, 191, 20),
+    kp(None, 86, 266, 26), kp("Home", 148, 270, 20), kp("End", 218, 250, 20), kp("_", 294, 226, 44), kp("=", 360, 234, 44), kp("PgDn", 423, 261, 20),
+    kp(None, 86, 340, 18), kp("<", 156, 325, 44), kp(">", 224, 309, 44), kp("Copy", 280, 315, 20), kp("Paste", 347, 321, 18), kp(";", 433, 316, 44),
+    kp(None, 318, 396, 23), kp(None, 396, 414, 26, rotate=-18), kp(None, 478, 421, 30, rotate=57),
+
+    kp(None, 849, 169, 44), kp(None, 920, 165, 44), kp(None, 987, 164, 44), kp("\\", 1058, 174, 44), kp("|", 1126, 193, 40), kp(None, 1178, 210, 23),
+    kp(u"\u2190", 849, 243, 44), kp(u"\u2193", 920, 234, 44), kp(u"\u2191", 987, 229, 44), kp(u"\u2192", 1058, 241, 44), kp(None, 1126, 259, 40), kp(None, 1186, 259, 44),
+    kp("pause", 837, 336, 16), kp(None, 920, 308, 44), kp(None, 987, 298, 44), kp("vol-", 1048, 330, 20), kp("vol+", 1114, 350, 20), kp(None, 1174, 348, 18),
+    kp(None, 778, 404, 30, rotate=-57), kp(None, 864, 410, 40, rotate=18), kp("alt", 946, 400, 23)
+    )
+
 def make_overlay(fname, keyset, bg_file=None):
     try:
         img = Image.open(bg_file)
@@ -86,4 +98,5 @@ def make_overlay(fname, keyset, bg_file=None):
 
 make_overlay("overlay_base.png", layer_base)
 make_overlay("overlay_lower.png", layer_lower)
-#make_overlay("overlay_lower.png", layer_lower, bg_file=bg)
+make_overlay("overlay_raise.png", layer_raise)
+#make_overlay("overlay_raise.png", layer_raise, bg_file=bg)
