@@ -108,6 +108,18 @@ layer_numpad = (
     kp(None, 778, 404, 30, rotate=-57), kp(None, 864, 410, 40, rotate=18), kp("0", 953, 386, 44)
     )
 
+layer_browser = (
+    kp(None, 86, 199, 26), kp(None, 156, 183, 44), kp(None, 224, 167, 44), kp(None, 294, 159, 44), kp(None, 360, 167, 44), kp(None, 433, 174, 44),
+    kp(None, 86, 266, 26), kp(None, 156, 250, 44), kp(None, 224, 234, 44), kp(None, 294, 226, 44), kp(None, 360, 234, 44), kp(None, 433, 241, 44),
+    kp(None, 86, 340, 18), kp(None, 156, 317, 44), kp(None, 224, 301, 44), kp(None, 294, 293, 44), kp(None, 360, 301, 44), kp(None, 433, 308, 44),
+    kp(None, 322, 400, 18), kp(None, 396, 414, 26, rotate=-18), kp(None, 478, 421, 30, rotate=57),
+
+    kp(None, 849, 169, 44), kp("Buf-", 910, 180, 20), kp("Buf+", 977, 179, 20), kp("BufX", 1048, 189, 20), kp(None, 1126, 193, 40), kp(None, 1178, 210, 23),
+    kp("Tab-", 839, 260, 20), kp("Scr-", 915, 249, 20), kp("Scr+", 982, 243, 20), kp("Tab+", 1048, 258, 20), kp(None, 1126, 259, 40), kp(None, 1186, 259, 44),
+    kp(None, 849, 316, 44), kp("tmux-", 910, 325, 18), kp("tmux+", 978, 315, 18), kp(None, 1058, 310, 44), kp(None, 1126, 332, 40), kp(None, 1174, 348, 18),
+    kp(None, 778, 404, 30, rotate=-57), kp(None, 864, 410, 40, rotate=18), kp(None, 946, 400, 18)
+    )
+
 def make_overlay(fname, keyset, bg_file=None):
     try:
         img = Image.open(bg_file)
@@ -125,4 +137,5 @@ make_overlay("overlay_lower.png", layer_lower)
 make_overlay("overlay_raise.png", layer_raise)
 make_overlay("overlay_function.png", layer_function)
 make_overlay("overlay_numpad.png", layer_numpad)
-#make_overlay("overlay_numpad.png", layer_numpad, bg_file=bg)
+make_overlay("overlay_browser.png", layer_browser)
+#make_overlay("overlay_browser.png", layer_browser, bg_file=bg)
