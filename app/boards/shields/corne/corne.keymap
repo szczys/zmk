@@ -137,7 +137,7 @@
 &trans  &kp DELETE     &trans            &kp MINUS      &kp PLUS       &kp PG_UP        &trans            &trans    &trans    &kp BACKSLASH      &kp PIPE         &trans
 &trans  &kp HOME       &kp END           &kp UNDER      &kp EQUAL      &kp PAGE_DOWN    &kp LEFT          &kp DOWN  &kp UP    &kp RIGHT          &trans           &trans
 &trans  &kp LESS_THAN  &kp GREATER_THAN  &kp LC(LS(C))  &kp LC(LS(V))  &kp SEMICOLON    &kp K_PLAY_PAUSE  &trans    &trans    &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &trans
-                                         &kp ESCAPE     &trans         &trans           &kp RET           &trans    &kp RALT
+                                         &kp ESCAPE     &trans         &trans           &trans            &trans    &kp RALT
             >;
 
             label = "Raise";
