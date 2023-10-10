@@ -120,6 +120,18 @@ layer_browser = (
     kp(None, 778, 404, 30, rotate=-57), kp(None, 864, 410, 40, rotate=18), kp(None, 946, 400, 18)
     )
 
+layer_mouse = (
+    kp(None, 86, 199, 26), kp(None, 156, 183, 44), kp("scrUp", 212, 182, 18), kp("mUp", 288, 169, 23), kp("scrDn", 348, 182, 18), kp(None, 433, 174, 44),
+    kp(None, 86, 266, 26), kp(None, 156, 250, 44), kp("mLt", 218, 244, 23), kp("mDn", 288, 236, 23), kp("mRt", 352, 244, 23), kp(None, 433, 241, 44),
+    kp(None, 86, 340, 18), kp(None, 156, 317, 44), kp(None, 224, 301, 44), kp(None, 294, 293, 44), kp(None, 360, 301, 44), kp(None, 433, 308, 44),
+    kp("rClk", 320, 400, 18), kp("mClk", 396, 414, 18, rotate=-18), kp("Lclk", 470, 411, 30, rotate=57),
+
+    kp(None, 849, 169, 44), kp(None, 920, 165, 44), kp(None, 987, 164, 44), kp(None, 1058, 174, 44), kp(None, 1126, 193, 40), kp(None, 1178, 210, 23),
+    kp(None, 849, 248, 44), kp(None, 920, 234, 44), kp(None, 987, 233, 44), kp(None, 1058, 246, 44), kp(None, 1126, 259, 40), kp(None, 1186, 259, 44),
+    kp(None, 849, 316, 44), kp(None, 920, 308, 44), kp(None, 987, 298, 44), kp(None, 1058, 310, 44), kp(None, 1126, 332, 40), kp(None, 1174, 348, 18),
+    kp(None, 778, 404, 30, rotate=-57), kp(None, 864, 410, 40, rotate=18), kp(None, 946, 400, 18)
+    )
+
 def make_overlay(fname, keyset, bg_file=None):
     try:
         img = Image.open(bg_file)
@@ -138,4 +150,5 @@ make_overlay("overlay_raise.png", layer_raise)
 make_overlay("overlay_function.png", layer_function)
 make_overlay("overlay_numpad.png", layer_numpad)
 make_overlay("overlay_browser.png", layer_browser)
-#make_overlay("overlay_browser.png", layer_browser, bg_file=bg)
+make_overlay("overlay_mouse.png", layer_mouse)
+#make_overlay("overlay_mouse.png", layer_mouse, bg_file=bg)
