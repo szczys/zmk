@@ -96,6 +96,18 @@ layer_function = (
     kp(None, 778, 404, 30, rotate=-57), kp(None, 864, 410, 40, rotate=18), kp("alt", 946, 400, 23)
     )
 
+layer_numpad = (
+    kp(None, 86, 199, 26), kp(None, 156, 183, 44), kp(None, 224, 167, 44), kp(None, 294, 159, 44), kp(None, 360, 167, 44), kp(None, 433, 174, 44),
+    kp(None, 86, 266, 26), kp(None, 156, 250, 44), kp(None, 224, 234, 44), kp(None, 294, 226, 44), kp(None, 360, 234, 44), kp(None, 433, 241, 44),
+    kp(None, 86, 340, 18), kp(None, 156, 317, 44), kp(None, 224, 301, 44), kp(None, 294, 293, 44), kp(None, 360, 301, 44), kp(None, 433, 308, 44),
+    kp(None, 322, 400, 18), kp(None, 396, 414, 26, rotate=-18), kp(None, 478, 421, 30, rotate=57),
+
+    kp("+", 849, 169, 44), kp("7", 920, 169, 44), kp("8", 987, 164, 44), kp("9", 1058, 174, 44), kp(None, 1126, 193, 40), kp(None, 1178, 210, 23),
+    kp("-", 849, 248, 44), kp("4", 920, 236, 44), kp("5", 987, 233, 44), kp("6", 1058, 244, 44), kp("ent", 1112, 269, 28), kp(None, 1186, 259, 44),
+    kp("=", 849, 316, 44), kp("1", 920, 308, 44), kp("2", 987, 302, 44), kp("3", 1058, 312, 44), kp(".", 1126, 332, 44), kp(None, 1174, 348, 18),
+    kp(None, 778, 404, 30, rotate=-57), kp(None, 864, 410, 40, rotate=18), kp("0", 953, 386, 44)
+    )
+
 def make_overlay(fname, keyset, bg_file=None):
     try:
         img = Image.open(bg_file)
@@ -112,4 +124,5 @@ make_overlay("overlay_base.png", layer_base)
 make_overlay("overlay_lower.png", layer_lower)
 make_overlay("overlay_raise.png", layer_raise)
 make_overlay("overlay_function.png", layer_function)
-#make_overlay("overlay_function.png", layer_function, bg_file=bg)
+make_overlay("overlay_numpad.png", layer_numpad)
+#make_overlay("overlay_numpad.png", layer_numpad, bg_file=bg)
