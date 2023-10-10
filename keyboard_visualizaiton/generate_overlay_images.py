@@ -84,6 +84,18 @@ layer_raise = (
     kp(None, 778, 404, 30, rotate=-57), kp(None, 864, 410, 40, rotate=18), kp("alt", 946, 400, 23)
     )
 
+layer_function = (
+    kp("BT_Clr", 86, 208, 14), kp("F1", 156, 193, 30), kp("F2", 224, 177, 30), kp("F3", 294, 169, 30), kp("F4", 360, 177, 30), kp("F5", 433, 184, 30),
+    kp(None, 86, 266, 26), kp("F11", 146, 260, 30), kp("F12", 210, 244, 30), kp(None, 294, 226, 44), kp(None, 360, 234, 44), kp(None, 433, 241, 44),
+    kp(None, 86, 340, 18), kp("BT0", 146, 329, 30), kp("BT1", 214, 313, 30), kp("BT2", 282, 305, 30), kp("BT3", 348, 313, 30), kp("BT4", 421, 320, 30),
+    kp(None, 322, 400, 18), kp(None, 396, 414, 26, rotate=-18), kp(None, 478, 421, 30, rotate=57),
+
+    kp("F6", 849, 179, 30), kp("F7", 920, 175, 30), kp("F8", 987, 174, 30), kp("F9", 1058, 184, 30), kp("F10", 1112, 203, 30), kp(None, 1178, 210, 23),
+    kp("LED", 838, 255, 28), kp(None, 920, 234, 44), kp(None, 987, 233, 44), kp(None, 1058, 246, 44), kp(None, 1126, 259, 40), kp(None, 1186, 259, 44),
+    kp(None, 849, 316, 44), kp(None, 920, 308, 44), kp(None, 987, 298, 44), kp(None, 1058, 310, 44), kp(None, 1126, 332, 40), kp(None, 1174, 348, 18),
+    kp(None, 778, 404, 30, rotate=-57), kp(None, 864, 410, 40, rotate=18), kp("alt", 946, 400, 23)
+    )
+
 def make_overlay(fname, keyset, bg_file=None):
     try:
         img = Image.open(bg_file)
@@ -99,4 +111,5 @@ def make_overlay(fname, keyset, bg_file=None):
 make_overlay("overlay_base.png", layer_base)
 make_overlay("overlay_lower.png", layer_lower)
 make_overlay("overlay_raise.png", layer_raise)
-#make_overlay("overlay_raise.png", layer_raise, bg_file=bg)
+make_overlay("overlay_function.png", layer_function)
+#make_overlay("overlay_function.png", layer_function, bg_file=bg)
