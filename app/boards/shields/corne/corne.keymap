@@ -41,6 +41,7 @@
         plus-er {
             bindings = <&kp PLUS>;
             key-positions = <3 4>;
+            timeout-ms = <35>;
         };
 
         equals-cv {
