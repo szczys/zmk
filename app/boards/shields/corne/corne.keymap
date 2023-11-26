@@ -18,6 +18,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp LEFT_BRACE>, <&kp LESS_THAN>;
         };
+
         td_br_close: td_br_close {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_BR_CLOSE";
@@ -35,11 +36,6 @@
         dashdf {
             bindings = <&kp KP_MINUS>;
             key-positions = <15 16>;
-        };
-
-        escape-jk {
-            bindings = <&kp ESCAPE>;
-            key-positions = <19 20>;
         };
 
         plus-er {
@@ -75,12 +71,14 @@
             #binding-cells = <0>;
             bindings = <&kp ESC &kp COLON &kp B &kp N &kp ENTER>;
         };
+
         vim_buffer_previous: vim_buffer_previous {
             compatible = "zmk,behavior-macro";
             label = "VIM_BUFFER_PREVIOUS";
             #binding-cells = <0>;
             bindings = <&kp ESC &kp COLON &kp B &kp P &kp ENTER>;
         };
+
         vim_buffer_delete: vim_buffer_delete {
             compatible = "zmk,behavior-macro";
             label = "VIM_BUFFER_DELETE";
@@ -137,7 +135,7 @@
 &trans  &kp DELETE     &trans            &kp MINUS      &kp PLUS       &kp PG_UP        &trans            &trans    &trans    &kp BACKSLASH      &kp PIPE         &trans
 &trans  &kp HOME       &kp END           &kp UNDER      &kp EQUAL      &kp PAGE_DOWN    &kp LEFT          &kp DOWN  &kp UP    &kp RIGHT          &trans           &trans
 &trans  &kp LESS_THAN  &kp GREATER_THAN  &kp LC(LS(C))  &kp LC(LS(V))  &kp SEMICOLON    &kp K_PLAY_PAUSE  &trans    &trans    &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &trans
-                                         &trans         &trans         &trans           &trans            &trans    &kp RALT
+                                         &trans         &trans         &kp ESCAPE       &trans            &trans    &kp RALT
             >;
 
             label = "Raise";
