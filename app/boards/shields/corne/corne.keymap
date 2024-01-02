@@ -28,6 +28,15 @@
                 <&kp RIGHT_BRACE>,
                 <&kp GREATER_THAN>;
         };
+
+        grave_and_codeblock: grave_and_codeblock {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GRAVE_AND_CODEBLOCK";
+            bindings = <&grave_codeblock>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     combos {
@@ -63,9 +72,40 @@
             bindings = <&tog 4>;
             key-positions = <0 12>;
         };
+
+        Grave {
+            bindings = <&grave_and_codeblock 0 GRAVE>;
+            key-positions = <1 2>;
+        };
+
+        Tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <13 14>;
+        };
+
+        Pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <22 21>;
+        };
+
+        Backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <33 34>;
+        };
+
+        Underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <16 17>;
+        };
     };
 
     macros {
+        grave_codeblock: grave_codeblock {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
+            label = "GRAVE_CODEBLOCK";
+        };
     };
 
     keymap {
