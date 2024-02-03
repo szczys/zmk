@@ -43,7 +43,7 @@
         compatible = "zmk,combos";
 
         dashdf {
-            bindings = <&kp KP_MINUS>;
+            bindings = <&kp MINUS>;
             key-positions = <15 16>;
         };
 
