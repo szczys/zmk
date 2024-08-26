@@ -1,5 +1,13 @@
 #include <dt-bindings/led/led.h>
 
+/ {
+    leds {
+        oled_pwr: oled_pwr {
+            gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;
+        };
+    };
+};
+
 &pinctrl {
     spi3_default: spi3_default {
         group1 {
