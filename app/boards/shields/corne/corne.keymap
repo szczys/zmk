@@ -7,7 +7,6 @@
  /**
   * TODO:
   *   alt-tab
-  *   all combos
   */
 
 #include <behaviors.dtsi>
@@ -29,6 +28,51 @@
                     label = "TD_BR_CLOSE";
                     #binding-cells = <0>;
                     bindings = <&kp RIGHT_BRACKET>, <&kp RIGHT_BRACE>, <&kp GT>;
+              };
+        };
+
+        combos {
+              compatible = "zmk,combos";
+
+              plus-er {
+                    bindings = <&kp PLUS>;
+                    key-positions = <3 4>;
+                    timeout-ms = <35>;
+              };
+
+              Tilde {
+                    bindings = <&kp TILDE>;
+                    key-positions = <13 14>;
+              };
+
+              dashdf {
+                    bindings = <&kp MINUS>;
+                    key-positions = <15 16>;
+              };
+
+              Underscore {
+                    bindings = <&kp UNDERSCORE>;
+                    key-positions = <16 17>;
+              };
+
+              equals-cv {
+                    bindings = <&kp EQUAL>;
+                    key-positions = <27 28>;
+              };
+
+              sft-prtscr-qp {
+                    bindings = <&kp LS(PRINTSCREEN)>;
+                    key-positions = <1 10>;
+              };
+
+              prtscr-zp {
+                    bindings = <&kp PRINTSCREEN>;
+                    key-positions = <25 10>;
+              };
+
+              toggle_num_escalt {
+                    bindings = <&tog 4>;
+                    key-positions = <0 12>;
               };
         };
 
