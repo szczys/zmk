@@ -21,14 +21,14 @@
                     compatible = "zmk,behavior-tap-dance";
                     label = "TD_BR_OPEN";
                     #binding-cells = <0>;
-                    bindings = <&kp LEFT_BRACKET>, <&kp LEFT_BRACE>;
+                    bindings = <&kp LEFT_BRACKET>, <&kp LEFT_BRACE>, <&kp LT>;
               };
 
               td_br_close: td_br_close {
                     compatible = "zmk,behavior-tap-dance";
                     label = "TD_BR_CLOSE";
                     #binding-cells = <0>;
-                    bindings = <&kp RIGHT_BRACKET>, <&kp RIGHT_BRACE>;
+                    bindings = <&kp RIGHT_BRACKET>, <&kp RIGHT_BRACE>, <&kp GT>;
               };
         };
 
@@ -58,7 +58,7 @@
                         bindings = <
   &trans  &kp EXCL      &kp AT        &kp HASH       &kp DLLR       &kp PRCNT  &kp CARET      &kp AMPS     &kp STAR      &kp LPAR  &kp RPAR  &kp BSPC
   &trans  &kp N1        &kp N2        &kp N3         &kp N4         &kp N5     &kp N6         &kp N7       &kp N8        &kp N9    &kp N0    &trans
-  &trans  &kp K_VOL_DN  &kp K_VOL_UP  &kp LC(LS(C))  &kp LC(LS(V))  &kp K_PP   &none          &td_br_open  &td_br_close  &kp GT    &kp LT    &trans
+  &trans  &kp K_VOL_DN  &kp K_VOL_UP  &kp LC(LS(C))  &kp LC(LS(V))  &kp K_PP   &none          &kp LA(J)      &kp LA(K)   &kp GT    &kp LT    &trans
                                       &trans         &trans         &trans     &kp F12        &trans       &kp COLON
                         >;
                         label = "Lower";
@@ -72,7 +72,7 @@
                         bindings = <
    &trans  &kp DEL   &none    &kp UNDER      &kp PLUS   &kp PG_UP  &trans         &kp LC(PG_UP)  &kp LC(PG_DN)  &none      &none     &trans
    &trans  &kp HOME  &kp END  &kp MINUS      &kp EQUAL  &kp PG_DN  &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT  &kp K_APP &trans
-   &trans  &trans    &trans   &kp TILDE      &kp GRAVE  &trans     &kp LC(SPACE)  &kp LA(J)      &kp LA(K)      &kp PIPE   &kp BSLH  &trans
+   &trans  &kp LT    &kp GT   &kp TILDE      &kp GRAVE  &trans     &kp LC(SPACE)  &td_br_open  &td_br_close     &kp PIPE   &kp BSLH  &trans
                               &kp LC(ENTER)  &trans     &none      &trans         &trans         &trans
                         >;
                         label = "Raise";
@@ -106,4 +106,9 @@
                         label = "Function";
                 };
         };
+};
+
+&lt {
+    quick-tap-ms = <175>;
+    tapping-term-ms = <230>;
 };
