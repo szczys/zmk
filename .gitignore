@@ -16,3 +16,6 @@ __pycache__
 
 # clangd
 app/.cache/
+
+# keymap_drawer generated yaml file
+szczys_corne_mx_zmk.yaml
