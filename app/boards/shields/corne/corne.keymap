@@ -114,7 +114,7 @@
                         bindings = <
   &trans  &kp EXCL      &kp AT        &kp HASH       &kp DLLR       &kp PRCNT  &kp CARET      &kp AMPS     &kp STAR      &kp LPAR  &kp RPAR  &kp BSPC
   &trans  &kp N1        &kp N2        &kp N3         &kp N4         &kp N5     &kp N6         &kp N7       &kp N8        &kp N9    &kp N0    &trans
-  &trans  &kp K_VOL_DN  &kp K_VOL_UP  &kp LC(LS(C))  &kp LC(LS(V))  &kp K_PP   &none          &kp LA(J)      &kp LA(K)   &kp GT    &kp LT    &trans
+  &trans  &kp K_VOL_DN  &kp K_VOL_UP  &kp LC(LS(C))  &kp LC(LS(V))  &kp K_PP   &alt_tab       &kp LA(J)      &kp LA(K)   &kp GT    &kp LT    &trans
                                       &trans         &trans         &trans     &kp F12        &trans       &kp COLON
                         >;
                         label = "Lower";
@@ -128,7 +128,7 @@
                         bindings = <
    &trans  &kp DEL   &none    &kp UNDER      &kp PLUS   &kp PG_UP  &trans         &kp LC(PG_UP)  &kp LC(PG_DN)  &none      &none     &trans
    &trans  &kp HOME  &kp END  &kp MINUS      &kp EQUAL  &kp PG_DN  &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT  &kp K_APP &trans
-   &trans  &kp LT    &kp GT   &kp TILDE      &kp GRAVE  &alt_tab   &kp LC(SPACE)  &td_br_open  &td_br_close     &kp PIPE   &kp BSLH  &trans
+   &trans  &kp LT    &kp GT   &kp TILDE      &kp GRAVE  &none      &kp LC(SPACE)  &td_br_open  &td_br_close     &kp PIPE   &kp BSLH  &trans
                               &kp LC(ENTER)  &trans     &none      &trans         &trans         &trans
                         >;
                         label = "Raise";
