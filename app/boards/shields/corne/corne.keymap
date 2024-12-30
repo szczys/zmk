@@ -47,7 +47,7 @@
                     compatible = "zmk,behavior-hold-tap";
                     label = "i3 hold-tap";
                     #binding-cells = <2>;
-                    flavor = "hold-preferred";
+                    flavor = "tap-preferred";
                     quick-tap-ms = <175>;
                     tapping-term-ms = <200>;
                     bindings = <&layer_gui>, <&kp>;
@@ -112,7 +112,7 @@
               };
 
               toggle_num_escalt {
-                    bindings = <&tog 4>;
+                    bindings = <&tog 3>;
                     key-positions = <0 12>;
               };
         };
