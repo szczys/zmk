@@ -52,6 +52,13 @@
                     tapping-term-ms = <200>;
                     bindings = <&layer_gui>, <&kp>;
               };
+
+              td_quote: td_quote {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "TD_QUOTE";
+                    #binding-cells = <0>;
+                    bindings = <&kp SQT>, <&kp DQT>;
+              };
         };
 
         macros {
@@ -79,11 +86,6 @@
                     bindings = <&kp PLUS>;
                     key-positions = <3 4>;
                     timeout-ms = <35>;
-              };
-
-              Tilde {
-                    bindings = <&kp TILDE>;
-                    key-positions = <13 14>;
               };
 
               dashdf {
@@ -115,6 +117,11 @@
                     bindings = <&tog 3>;
                     key-positions = <0 12>;
               };
+
+              toggle_func_altsft {
+                    bindings = <&tog 4>;
+                    key-positions = <12 24>;
+              };
         };
 
         keymap {
@@ -128,8 +135,8 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
   &kp ESCAPE  &kp Q  &kp W  &kp E      &kp R           &kp T        &kp Y              &kp U      &kp I       &kp O    &kp P     &kp DELETE
-  &sk LALT    &kp A  &kp S  &kp D      &lt 3 F         &kp G        &kp H              &kp J      &kp K       &kp L    &kp SEMI  &kp SQT
-  &sk LSHIFT  &kp Z  &kp X  &kp C      &kp V           &kp B        &kp N              &kp M      &kp COMMA   &kp DOT  &kp FSLH  &sl 4
+  &kp LALT    &kp A  &kp S  &kp D      &lt 3 F         &kp G        &kp H              &kp J      &kp K       &kp L    &kp SEMI  &kp SQT
+  &kp LSHIFT  &kp Z  &kp X  &kp C      &kp V           &kp B        &kp N              &kp M      &kp COMMA   &kp DOT  &kp FSLH  &sl 4
                             &kp LCTRL  &mt LGUI ENTER  &lthp 1 TAB  &lthp 2 BACKSPACE  &i3ht 1 SPACE  &kp RSHIFT
                         >;
                         label = "Qwerty";
@@ -144,7 +151,7 @@
   &trans  &kp EXCL      &kp AT        &kp HASH       &kp DLLR       &kp PRCNT  &kp CARET      &kp AMPS     &kp STAR      &kp LPAR  &kp RPAR  &kp BSPC
   &trans  &kp N1        &kp N2        &kp N3         &kp N4         &kp N5     &kp N6         &kp N7       &kp N8        &kp N9    &kp N0    &trans
   &trans  &kp K_VOL_DN  &kp K_VOL_UP  &kp LC(LS(C))  &kp LC(LS(V))  &kp K_PP   &alt_tab       &kp LA(J)    &kp LA(K)     &trans    &trans    &trans
-                                      &trans         &trans         &trans     &kp F12        &trans       &kp COLON
+                                      &trans         &trans         &trans     &lt 4 F12      &trans       &kp COLON
                         >;
                         label = "Lower";
                 };
@@ -155,9 +162,9 @@
 // | SHFT |     |     |  ~  |  `  |ALTTB|   |CTSPC|ALT-J|ALT-K|  |  |  \  |      |
 //                    |CTREN|     |     |   |     |     |     |
                         bindings = <
-   &trans  &kp DEL   &none    &kp UNDER      &kp PLUS   &kp PG_UP  &trans         &kp LC(PG_UP)  &kp LC(PG_DN)  &none      &none     &trans
-   &trans  &kp HOME  &kp END  &kp MINUS      &kp EQUAL  &kp PG_DN  &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT  &kp K_APP &trans
-   &trans  &kp LT    &kp GT   &kp TILDE      &kp GRAVE  &none      &kp LC(SPACE)  &td_br_open    &td_br_close   &kp PIPE   &kp BSLH  &trans
+   &trans  &kp ESC   &none    &kp UNDER      &kp PLUS   &kp PG_UP  &trans         &kp LC(PG_UP)  &kp LC(PG_DN)  &none      &kp DEL   &trans
+   &trans  &kp LT    &kp GT   &kp LBRC       &kp RBRC   &td_quote  &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT  &td_quote &trans
+   &trans  &trans    &trans   &kp TILDE      &kp GRAVE  &kp PG_DN  &kp LC(SPACE)  &kp LBKT       &kp RBKT       &kp PIPE   &kp BSLH  &trans
                               &kp LC(ENTER)  &trans     &none      &trans         &trans         &trans
                         >;
                         label = "Raise";
@@ -183,10 +190,10 @@
 // |      |BTS-0|BTS-1|BTS-2|BTS-3|BTS-4|   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-  &bt BT_CLR  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6             &kp F7  &kp F8    &kp F9  &kp F10  &trans
-  &trans      &kp F11       &kp F12       &trans        &trans        &trans          &ext_power EP_TOG  &trans  &trans    &trans  &trans   &trans
-  &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans             &trans  &trans    &trans  &trans   &trans
-                                          &trans        &trans        &trans          &trans             &trans  &trans
+  &bt BT_CLR  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp F6    &kp F7    &kp F8    &kp F9  &kp F10  &trans
+  &trans      &kp F11       &kp F12       &trans        &trans        &ext_power EP_TOG &kp HOME  &kp PG_DN &kp PG_UP &kp END &trans   &trans
+  &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans    &trans    &trans    &trans  &trans   &trans
+                                          &trans        &trans        &trans            &trans    &trans    &trans
                         >;
                         label = "Function";
                 };
